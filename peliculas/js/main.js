@@ -1,7 +1,23 @@
 import Pelicula from './Pelicula.js';
 
-var p1 = new Pelicula('Avengers', ' Accion', 2017, 120);
-var p2 = new Pelicula('Harry Potter');
+class Main{
+    constructor(){
+    
+    document.querySelector('#btn').addEventListener('click', this.onAgregar);
+    }
+    onAgregar(){
+        let nombre = document.querySelector('#nombre');
+        let genero = document.querySelector('#genero');
+        let año = document.querySelector('#año');
+        let duracion = document.querySelector('#duracion');
 
-console.log('La duracion de la peicula ' + p1.titulo + ' es ' + p1.getDuracionEnHoras());
-console.log(p2);
+        let p1 = new Pelicula(
+        nombre.value,
+        genero.value,
+        Number(año.value),
+        Number(duracion.value)
+        )    
+    }
+}
+
+var m = new Main();

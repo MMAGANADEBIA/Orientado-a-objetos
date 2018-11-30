@@ -1,4 +1,3 @@
-
 export default class Pelicula{
     constructor(nombre, genero, año, duracion){
         this.titulo = nombre;
